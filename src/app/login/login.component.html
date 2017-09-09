@@ -1,0 +1,31 @@
+<div class="head blue-grey darken-2">
+  <h1>Supply Chain Management</h1>
+</div>
+<div class="row">
+  <div class="s12 m12">
+    <form>
+      <div class="row">
+      <div class="file-field input-field col s6 offset-s3">
+            <div class="btn">
+              <span>Keystore</span>
+              <input type="file" (change)="fileChange($event)" >
+            </div>
+            <div class="file-path-wrapper">
+              <input #report class="file-path validate" type="text">
+            </div>
+      </div>
+      <div class="input-field col s6 offset-s3">
+        <input id="password" type="password" #passwd class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s3 offset-s5">
+        <button class="btn waves-effect waves-light" type="button" (click)='login()' name="action">Login
+              <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>

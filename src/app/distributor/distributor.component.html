@@ -1,0 +1,159 @@
+<nav>
+  <div class="nav-wrapper blue-grey darken-2">
+    <a href="#" class="brand-logo">Supply Chain Management</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>name</li>
+      <li><a href="badges.html">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="col s6 offset-s3">
+    <ul class="tabs">
+      <li class="tab col s6"><a class="active" href="#request">Request Shipment</a></li>
+      <li class="tab col s6"><a href="#send">Send Shipment</a></li>
+    </ul>
+  </div>
+  <div id="request" class="col s12">
+    <form>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s4">
+                    <input #product id="product" type="text" class="validate">
+                    <label for="product">Product Name</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input #orderNo id="order_no" type="text" class="validate">
+                    <label for="order_no">Order No.</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input #deliveryDate id="delivery_date" type="text" class="validate">
+                    <label for="delivery_date">Delivery Date</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input #price id="price" type="text" class="validate">
+                    <label for="price">Price</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input #quantity id="quantity" type="text" class="validate">
+                    <label for="quantity">Quantity</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s3 offset-s5">
+                <button class="btn waves-effect waves-light" type="button" name="action">Submit
+                      <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  <div id="send" class="col s12">
+    <form>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input #product id="name" type="text" class="validate">
+                    <label for="name">Product Name</label>
+                  </div>
+                  <div class="file-field input-field col s6">
+                    <div class="btn">
+                      <span>Report</span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input #report class="file-path validate" type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+                <div class="input-field col s6">
+                  <input #orderNo id="order_no" type="text" class="validate">
+                  <label for="order_no">Order No.</label>
+                </div>
+                <div class="input-field col s6">
+                  <input #deliverDate id="delivery_date" type="text" class="validate">
+                  <label for="delivery_date">Delivery Date</label>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s4">
+                    <input #temp id="temp" type="text" class="validate">
+                    <label for="temp">Temperature</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input #price id="price" type="text" class="validate">
+                    <label for="price">Price</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input #quantity id="quantity" type="text" class="validate">
+                    <label for="quantity">Quantity</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s3 offset-s5">
+                <button class="btn waves-effect waves-light" type="button" name="action">Submit
+                      <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  </div>
+</div>
