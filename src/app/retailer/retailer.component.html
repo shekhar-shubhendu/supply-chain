@@ -24,8 +24,8 @@
                 <label for="order_no">Order No.</label>
               </div>
               <div class="input-field col s4">
-                <input #deliveryDate id="delivery_date" type="text" class="validate">
-                <label for="delivery_date">Delivery Date</label>
+                <input #deliveryDate id="delivery_date" type="date" class="validate">
+                <!-- <label for="delivery_date">Delivery Date</label> -->
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="row">
           <div class="col s3 offset-s5">
-            <button class="btn waves-effect waves-light" type="button" name="action">Submit
+            <button class="btn waves-effect waves-light" type="button" (click)='onSubmit($event)' name="action">Submit
                   <i class="material-icons right">send</i>
             </button>
           </div>

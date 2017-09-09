@@ -1,6 +1,5 @@
 import { Component, HostListener, NgZone, ViewChild, OnInit} from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { ContractService } from '../services/contract.service'
 import { Router } from '@angular/router';
 declare var Wallet: any;
 declare var filestore: any;
@@ -16,13 +15,10 @@ export class LoginComponent implements OnInit {
   @ViewChild('keyFile') keyFile: any;
   @ViewChild('passwd') passwd: any;
 
-  constructor(private auth: AuthService, private contract: ContractService, private router: Router) {
+  constructor(private auth: AuthService, private router: Router) {
   }
 
   ngOnInit() {
-    this.contract.createOrder('A21111', 'B', 'c', 'd', 'e', 'f').then(result=>{
-      // console.log(result);
-    });
   }
 
   fileChange(event: any) {
