@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Http, RequestOptions, RequestOptionsArgs, RequestMethod, Headers, Request } from '@angular/http';
+const ipfs = require('ipfs-js');
 
 @Injectable()
 export class IpfsService {
 
   ipfsEndpoint = 'http://localhost:4201/upload/ipfs';
-
   constructor(private http: Http) { }
 
   fileChange(fileList: FileList) {

@@ -11,6 +11,7 @@ declare const Materialize;
 })
 export class ManufactureComponent implements OnInit {
 
+  dataValue = [];
   @ViewChild('product') product: any;
   @ViewChild('orderNo') orderNo: any;
   @ViewChild('deliveryDate') deliveryDate: any;
@@ -32,6 +33,11 @@ export class ManufactureComponent implements OnInit {
     this.contract.checkMfgTrigger.subscribe(result => {
       if (result !== 'noop') {
       this.setData(result);
+      }
+    });
+    this.contract.checkReportTrigger.subscribe(result => {
+      if (result.length >= 1) {
+      this.setReport(result);
       }
     });
   }
@@ -61,6 +67,12 @@ export class ManufactureComponent implements OnInit {
       this.quantity.nativeElement.value = result[3];
       Materialize.updateTextFields();
     });
+  }
+
+  setReport(result){
+    if( result[1] == '3') {
+      this.dataValue.push({orderno: result[0], fileInfo: 'http://127.0.0.1:8080/ipfs/' + result[2]});
+      }
   }
 
   onSubmitReport(event) {

@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContractService } from '../services/contract.service'
-import { HttpClient } from '@angular/common/http'
 declare var Materialize;
 @Component({
   selector: 'app-retailer',
@@ -18,7 +17,7 @@ dataValue = [];
   @ViewChild('price') price: any;
   @ViewChild('quantity') quantity: any;
 
-  constructor(private contract: ContractService, private http: HttpClient) { }
+  constructor(private contract: ContractService) { }
 
   ngOnInit() {
     this.contract.checkReportTrigger.subscribe(result => {
@@ -28,17 +27,10 @@ dataValue = [];
     });
   }
   setData(result) {
-    console.log(result);
-    const url = 'http://127.0.0.1:8080/ipfs/' + result[2];
-    console.log(url);
-    this.http.get(url).subscribe(resp => {
-      console.log(resp);
+      if( result[1] == '1') {
       this.dataValue.push({orderno: result[0], fileInfo: 'http://127.0.0.1:8080/ipfs/' + result[2]});
-    },
-    err => {
-      console.log(err)
-    });
-     }
+      }
+    }
 
   onSubmit(event) {
     this.contract.createOrder(this.orderNo.nativeElement.value,

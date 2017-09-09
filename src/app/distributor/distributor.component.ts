@@ -10,6 +10,7 @@ declare const Materialize;
 })
 export class DistributorComponent implements OnInit {
 
+  dataValue=[];
   @ViewChild('product') product: any;
   @ViewChild('orderNo') orderNo: any;
   @ViewChild('deliveryDate') deliveryDate: any;
@@ -33,6 +34,12 @@ export class DistributorComponent implements OnInit {
       this.setData(result);
       }
     });
+
+    this.contract.checkReportTrigger.subscribe(result => {
+      if (result.length >= 1) {
+      this.setReport(result);
+      }
+    });
   }
 
   fileChange(event: any) {
@@ -42,6 +49,11 @@ export class DistributorComponent implements OnInit {
       );
   }
 
+  setReport(result) {
+    if (result[1] == '2') {
+      this.dataValue.push({orderno: result[0], fileInfo: 'http://127.0.0.1:8080/ipfs/' + result[2]});
+      }
+  }
   setData(orderno) {
     console.log(orderno);
     this.contract.fetchInitialDetails(orderno).then(result => {
