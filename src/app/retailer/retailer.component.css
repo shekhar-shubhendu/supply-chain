@@ -5,3 +5,9 @@ nav{
 .brand-logo{
   padding-left:10px;
 }
+.tabs .tab a{
+  color: #615d5d;
+}
+.tab a .active{
+  color: #615d5d;
+}

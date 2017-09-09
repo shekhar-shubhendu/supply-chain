@@ -2,7 +2,7 @@
   <div class="nav-wrapper blue-grey darken-2">
     <a href="#" class="brand-logo">Supply Chain Management</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li>name</li>
+      <li>{{name}}</li>
       <li><a href="badges.html">Logout</a></li>
     </ul>
   </div>
@@ -57,7 +57,7 @@
         <div class="file-field input-field">
           <div class="btn">
             <span>Report</span>
-            <input type="file">
+            <input type="file" (change)='fileChange($event)'>
           </div>
           <div class="file-path-wrapper">
             <input #report class="file-path validate" type="text">
@@ -67,7 +67,7 @@
     </div>
         <div class="row">
           <div class="col s3 offset-s5">
-            <button class="btn waves-effect waves-light" type="button" name="action">Submit
+            <button class="btn waves-effect waves-light" type="button" (click)='onSubmitReport($event)' name="action">Submit
                   <i class="material-icons right">send</i>
             </button>
           </div>

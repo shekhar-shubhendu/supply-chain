@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 import { ContractService } from './services/contract.service';
 import { RouterModule } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { RetailerComponent } from './retailer/retailer.component';
 import { DistributorComponent } from './distributor/distributor.component';
 import { ManufactureComponent } from './manufacture/manufacture.component';
@@ -21,6 +21,7 @@ import { RouteModule } from './route/route.module'
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     RouteModule
   ],
   declarations: [

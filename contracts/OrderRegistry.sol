@@ -33,6 +33,7 @@ contract OrderRegistry {
   event OrderGenerated(string orderno);
   event MfgTrigger(string orderno);
   event SupplyTrigger(string orderno);
+  event ReportSubmit(string orderno, uint category, string report);
 
   function createOrder(string orderno, string product, string temp, string value, string quantity, string delivery) {
     registry[orderno].product_name = product;
@@ -70,6 +71,7 @@ contract OrderRegistry {
     if( category == 3 ) {
       registry[orderno].supplier_report = report;
     }
+    ReportSubmit(orderno, category, report);
   }
 
   function getReport(string orderno, uint category) constant returns(string) {

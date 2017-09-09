@@ -24,6 +24,8 @@ export class DistributorComponent implements OnInit {
   @ViewChild('cost') price1: any;
   @ViewChild('quant') quantity1: any;
 
+  name = 'Distributor';
+
   constructor(private ipfs: IpfsService, private contract: ContractService) { }
   ngOnInit() {
     this.contract.checkOrderGen.subscribe(result => {
@@ -47,11 +49,13 @@ export class DistributorComponent implements OnInit {
       Materialize.toast('New Order Received. Order No: ' + orderno, 4000);
       this.product.nativeElement.value = result[0];
       this.product1.nativeElement.value = result[0];
+
       this.orderNo.nativeElement.value = orderno;
       this.orderNo1.nativeElement.value = orderno;
-      this.deliveryDate.nativeElement.value = result[4];
-      this.temp.nativeElement.value = result[1];
-      this.price.nativeElement.value = result[2];
+
+      this.deliveryDate.nativeElement.value = result[1];
+      this.temp.nativeElement.value = result[2];
+      this.price.nativeElement.value = result[4];
       this.quantity.nativeElement.value = result[3];
       Materialize.updateTextFields();
     });
@@ -68,7 +72,7 @@ export class DistributorComponent implements OnInit {
 
   onSubmit(event) {
     this.contract.setDistValues(this.orderNo1.nativeElement.value,
-      'Distributor 1',
+      this.name,
       this.deliveryDate1.nativeElement.value,
       this.price1.nativeElement.value,
       this.quantity1.nativeElement.value).then(result => {
