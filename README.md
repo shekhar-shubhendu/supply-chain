@@ -33,10 +33,10 @@ There are 2 small parts to successfully running this project.
 ### URLs
 
 1.) `/login`
-1.) `/retailer`
-1.) `/distributor`
-1.) `/manufacturer`
-1.) `/supplier`
+2.) `/retailer`
+3.) `/distributor`
+4.) `/manufacturer`
+5.) `/supplier`
 
 
 ## Technologies & Languages Used
