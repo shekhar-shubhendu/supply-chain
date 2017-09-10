@@ -28,7 +28,7 @@ There are 2 small parts to successfully running this project.
 ### Login
 
 1. This project uses your keystore file to login to the application.
-2. For now, the addresses that can login are hardcoded in `auth.service.ts`
+2. For now, the accounts that can login are hardcoded in `auth.service.ts` with there role. Future builds will feature a screen for proper role and account management.
 
 ### URLs
 
