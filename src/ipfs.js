@@ -75,6 +75,7 @@ app.post('/upload/ipfs', upload.single('uploadFile'), function (request, respons
             msg: 'No Files Found.'
         });
     } else {
+        console.log(request);
         ipfs.api.id(function (err, res) {
             if (typeof res !== undefined) {
                 var data = base64_encode(request.file.path);

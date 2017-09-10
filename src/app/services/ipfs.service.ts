@@ -30,4 +30,13 @@ export class IpfsService {
     }
   }
 
+  getBase64(files, callback) {
+    const file = files[0];
+    const reader = new FileReader();
+    reader.onload = function (readerEvt) {
+      callback(reader.result);
+    };
+    reader.readAsDataURL(file);
+  }
+
 }
