@@ -29,6 +29,7 @@ There are 2 small parts to successfully running this project.
 
 1. This project uses your keystore file to login to the application.
 2. For now, the accounts that can login are hardcoded in `auth.service.ts` with there role. Future builds will feature a screen for proper role and account management.
+3. You can find the keystore for default accounts and there password in 'keys' folder.
 
 ### URLs
 
