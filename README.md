@@ -25,6 +25,19 @@ There are 2 small parts to successfully running this project.
 9. Now finally, start the project with `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 10. Make sure there are no errors in browser console
 
+### Login
+
+1.) This project uses your keystore file to login to the application.
+2.) For now, the addresses that can login are hardcoded in `auth.service.ts`
+
+### URLs
+
+1.) `/login`
+1.) `/retailer`
+1.) `/distributor`
+1.) `/manufacturer`
+1.) `/supplier`
+
 
 ## Technologies & Languages Used
 1. Angular4 (Typescript/Javascript)
