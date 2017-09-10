@@ -27,16 +27,16 @@ There are 2 small parts to successfully running this project.
 
 ### Login
 
-1.) This project uses your keystore file to login to the application.
-2.) For now, the addresses that can login are hardcoded in `auth.service.ts`
+1. This project uses your keystore file to login to the application.
+2. For now, the addresses that can login are hardcoded in `auth.service.ts`
 
 ### URLs
 
-1.) `/login`
-2.) `/retailer`
-3.) `/distributor`
-4.) `/manufacturer`
-5.) `/supplier`
+1. `/login`
+2. `/retailer`
+3. `/distributor`
+4. `/manufacturer`
+5. `/supplier`
 
 
 ## Technologies & Languages Used
