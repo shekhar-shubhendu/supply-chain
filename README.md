@@ -39,6 +39,9 @@ There are 2 small parts to successfully running this project.
 4. `/manufacturer`
 5. `/supplier`
 
+### Todo/Bugs:
+
+1.) Fix IPFS upload and download
 
 ## Technologies & Languages Used
 1. Angular4 (Typescript/Javascript)
