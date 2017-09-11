@@ -7,6 +7,7 @@ var mime = require('mime');
 var ipfs = require("ipfs-js");
 var Promise = require('promise');
 var session = require('express-session');
+const DataURI = require('datauri').promise;
 
 var app = express();
 var http = require("http");
