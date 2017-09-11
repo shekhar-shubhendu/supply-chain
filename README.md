@@ -9,6 +9,13 @@ Supply chain management on blockchain using Angular 4 + Truffle + IPFS + Ethereu
 ## How to use
 There are 2 small parts to successfully running this project.
 
+### Prerequisite
+
+1. Node.js
+2. IPFS
+3. Truffle Framework (`npm install -g truffle` or on linux `sudo npm install -g truffle`)
+
+
 ### Part 1
 
 1. `git clone https://github.com/shekhar-shubhendu/supply-chain.git`
