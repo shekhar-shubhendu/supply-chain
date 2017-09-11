@@ -14,7 +14,7 @@ There are 2 small parts to successfully running this project.
 1. Node.js
 2. IPFS
 3. Truffle Framework (`npm install -g truffle` or on linux `sudo npm install -g truffle`)
-
+4. Testrpc (`npm install -g ethereumjs-testrpc` or on linux `sudo npm install -g ethereumjs-testrpc`)
 
 ### Part 1
 
