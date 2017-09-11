@@ -15,7 +15,6 @@ There are 2 small parts to successfully running this project.
 2. `cd suply-chain`
 3. `npm install`
 4. `npm install -g @angular/cli@latest`
-(linux users might have to do: `sudo npm install -g @angular/cli@latest`)
 
 ### Part 2
 
