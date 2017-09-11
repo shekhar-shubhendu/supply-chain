@@ -58,3 +58,7 @@ There are 2 small parts to successfully running this project.
 3. IPFS
 4. Node.js
 5. Express
+
+## License
+
+[GNU GPLv3](./LICENSE)
