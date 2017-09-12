@@ -28,7 +28,7 @@ There are 2 small parts to successfully running this project.
 
 4. Open a new terminal and start IPFS daemon with `ipfs daemon`
 5. Now from inside the project directory run `node src/ipfs.js`. This will start a ipfs file upload server on port 4201.
-6. Start testrpc in new terminal.
+6. Start testrpc in new terminal with `testrpc`.
 7. From inside the project directory run `truffle compile` to compile your contracts
 8. And `truffle migrate` to deploy those contracts to the network
 9. Now finally, start the project with `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -52,7 +52,7 @@ There are 2 small parts to successfully running this project.
 
 1.) Fix IPFS upload and download
 
-## Technologies & Languages Used
+## Technologies & Languages Used:
 1. Angular4 (Typescript/Javascript)
 2. Truffle (Solidity)
 3. IPFS
