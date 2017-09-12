@@ -77,7 +77,7 @@ app.post('/upload/ipfs', upload.single('uploadFile'), function (request, respons
         console.log(request);
         ipfs.api.id(function (err, res) {
             if (typeof res !== undefined) {
-                var data = base64_encode(request.file.path);
+              var data = "data:"+request.file.mimetype+";base64,"+base64_encode(request.file.path);
                 ipfs.add(data, function (err, resHash) {
                     fs.unlink(request.file.path);
                     response.json({
