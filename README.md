@@ -19,7 +19,7 @@ There are 2 small parts to successfully running this project.
 ### Part 1
 
 1. `git clone https://github.com/shekhar-shubhendu/supply-chain.git`
-2. `cd suply-chain`
+2. `cd supply-chain`
 3. `npm install`
 4. `npm install -g @angular/cli@latest`
 (linux users might have to do: `sudo npm install -g @angular/cli@latest`)
