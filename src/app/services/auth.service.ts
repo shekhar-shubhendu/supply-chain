@@ -29,7 +29,6 @@ export class AuthService {
 
   checkCredential(keystore: string, password: string) {
     let role: any;
-    role = 'not set';
     try {
       this.wallet = Wallet.getWalletFromPrivKeyFile(keystore, password);
       const address = this.wallet.getAddressString();
@@ -38,7 +37,6 @@ export class AuthService {
         }).catch(function(e){
           console.log(e);
         });
-      // });
     }catch (e) {
       role = 'not found';
     }
