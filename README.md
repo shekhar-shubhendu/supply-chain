@@ -59,6 +59,12 @@ There are 2 small parts to successfully running this project.
 4. Node.js
 5. Express
 
+## Acknowledgments
+
+* [Nikhil Bhaskar](https://github.com/Nikhil22) for [Angular CLI + Truffle Starter Dapp](https://github.com/Nikhil22/angular4-truffle-starter-dapp)
+* [MyEtherWallet](https://github.com/kvhnuke/etherwallet)
+
+
 ## License
 
 [GNU GPLv3](./LICENSE)
