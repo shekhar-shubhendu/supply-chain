@@ -1,4 +1,5 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.5.0;
+
 
 contract OrderRegistry {
   struct Order {
@@ -35,33 +36,33 @@ contract OrderRegistry {
   event SupplyTrigger(string orderno);
   event ReportSubmit(string orderno, uint category, string report);
 
-  function createOrder(string orderno, string product, string temp, string value, string quantity, string delivery) {
+  function createOrder(string memory orderno, string memory product, string memory temp, string memory value, string memory quantity, string memory delivery) public {
     registry[orderno].product_name = product;
     registry[orderno].thresh_temp = temp;
     registry[orderno].dist_value = value;
     registry[orderno].dist_quantity = quantity;
     registry[orderno].dist_date = delivery;
-    OrderGenerated(orderno);
+    emit OrderGenerated(orderno);
   }
 
-  function setDistValues(string orderno, string name, string delivery, string value, string quantity) {
+  function setDistValues(string memory orderno, string memory name, string memory delivery, string memory value, string memory quantity) public {
     registry[orderno].dist_name = name;
     registry[orderno].mfg_date = delivery;
     registry[orderno].mfg_value = value;
     registry[orderno].mfg_quantity = quantity;
-    MfgTrigger(orderno);
+    emit MfgTrigger(orderno);
   }
 
-  function setMfgValues(string orderno, string name, string material, string delivery, string value, string quantity) {
+  function setMfgValues(string memory orderno, string memory name, string memory material, string memory delivery, string memory value, string memory quantity) public {
     registry[orderno].mfg_name = name;
     registry[orderno].supplier_date = delivery;
     registry[orderno].supplier_value = value;
     registry[orderno].supplier_quantity = quantity;
     registry[orderno].raw_material_name = material;
-    SupplyTrigger(orderno);
+    emit SupplyTrigger(orderno);
   }
 
-  function setReport(string orderno, uint category, string report) {
+  function setReport(string memory orderno,uint category, string memory report) public {
     if(category == 1) {
       registry[orderno].dist_report = report;
     }
@@ -71,10 +72,10 @@ contract OrderRegistry {
     if( category == 3 ) {
       registry[orderno].supplier_report = report;
     }
-    ReportSubmit(orderno, category, report);
+    emit ReportSubmit(orderno, category, report);
   }
 
-  function getReport(string orderno, uint category) constant returns(string) {
+  function getReport(string memory orderno,uint category) public view returns(string memory) {
     if(category == 1) {
       return registry[orderno].dist_report;
     }
@@ -87,7 +88,7 @@ contract OrderRegistry {
     return "undefined";
   }
 
-  function fetchInitialDetails(string orderno) constant returns(string, string, string, string, string) {
+  function fetchInitialDetails(string memory orderno) public view returns(string memory, string memory, string memory,string memory, string memory) {
     return (registry[orderno].product_name,
             registry[orderno].thresh_temp,
             registry[orderno].dist_value,
@@ -95,12 +96,12 @@ contract OrderRegistry {
             registry[orderno].dist_date);
   }
 
-  function getDistValues(string orderno) constant returns(string, string, string, string) {
-    return (registry[orderno].dist_name, registry[orderno].mfg_date,
+  function getDistValues(string memory orderno) public view returns(string memory, string memory, string memory, string memory) {
+    return (registry[orderno].dist_name , registry[orderno].mfg_date,
             registry[orderno].mfg_value, registry[orderno].mfg_quantity);
   }
 
-  function getMfgDetails(string orderno) constant returns(string, string, string, string, string) {
+  function getMfgDetails(string memory orderno) public view returns(string memory,string memory,string memory,string memory,string memory) {
     return (registry[orderno].mfg_name,
     registry[orderno].supplier_date,
     registry[orderno].supplier_value,
